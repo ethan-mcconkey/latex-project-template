@@ -1,0 +1,58 @@
+%! TEX program = xelatex
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\renewcommand{\rmdefault}{ugm}
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\familydefault}{\rmdefault}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage[sf]{titlesec}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{titling}
+\usepackage{anyfontsize}
+
+\title{Title}
+\author{Ethan McConkey}
+\date{\today}
+
+\pagestyle{fancy}
+
+\lhead{}
+\rhead{}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\titleformat{\section}{\fontfamily{phv}\selectfont\Large\center}{\thesection}{1em}{}
+\titleformat{\subsection}{\fontfamily{phv}\selectfont\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\fontfamily{phv}\selectfont\normalsize\em}{\thesubsubsection}{1em}{}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{titlepage}
+    \begin{center}
+        \fontfamily{phv}\selectfont
+        \fontsize{50pt}{65pt}\selectfont\thetitle
+        \vfill
+        \normalsize\theauthor\\[0.5cm]
+        \normalsize\em\thedate
+    \end{center}
+\end{titlepage}
+\tableofcontents
+\doublespacing
+\newpage
+
+
+
+\newpage
+\renewcommand\refname{References}
+\nocite{*}
+\bibliography{references}
+\bibliographystyle{agsm}
+\addcontentsline{toc}{section}{References}
+\end{document}
